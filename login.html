@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Entrar</title>
+    
+</head>
+<body>
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <img src="Imagens/logo.png" height="70">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+            <!-- <span class="fs-4">Joaquina Hair Design</span> -->
+          </a>
+    
+          <ul class="nav nav-pills">
+            <li class="nav-item"><a href="index.html" class="nav-link" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="servicos.html" class="nav-link">Serviços</a></li>
+            <li class="nav-item"><a href="cadastro.html" class="nav-link">Cadastro</a></li>
+            <li class="nav-item"><a href="login2.html" class="nav-link active">Logar</a></li>
+            <li class="nav-item"><a href="equipe.html" class="nav-link">Equipe</a></li>
+            <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+          </ul>
+    </header>
+    <main class="form-signin w-100 m-auto">
+        <div class="container">
+      
+          <!-- Formulário -->
+          <form>
+          <h1 class="h3 mb-3 fw-normal" style="text-align: center;">Please sign in</h1>
+      
+          <!-- Login/ Usuário -->
+          <div class="form-floating">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+            <label for="floatingInput">Email</label><br>
+          </div>
+
+          <!-- Senha -->
+          <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Senha" required>
+            <label for="floatingPassword">Senha</label><br>
+          </div>
+          
+          <div class="form-check text-start my-3">
+            <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Remember me
+            </label>
+          </div>
+          
+          <!-- Submit  -->
+          <button class="btn btn-primary w-100 py-2" type="submit" onclick="validarLogin(); return false">Entrar</button>
+        </form>
+        </div>
+      </main>
+    <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+          <li class="nav-item"><a href="servicos.html" class="nav-link">Serviços</a></li>
+          <li class="nav-item"><a href="cadastro.html" class="nav-link">Cadastro</a></li>
+          <li class="nav-item"><a href="equipe.html" class="nav-link px-2 text-body-secondary">Equipe</a></li>
+          <li class="nav-item"><a href="contato.html" class="nav-link px-2 text-body-secondary">Contato</a></li>
+        </ul>
+        <p class="text-center text-body-secondary">© 2023 Joaquina Hair Design, Inc</p>
+    </footer>
+
+    <script type="text/javascript">
+
+      function validarLogin(){
+
+        //Declaração de variáveis
+        var usuario = document.getElementById("floatingInput").value;
+        var senha = document.getElementById("floatingPassword").value;
+
+        //Validação da senha
+
+          if(usuario==="" || senha===""){
+          alert("Canalha! Um dos campos está vazio!")
+        }
+
+        else if(usuario==="teste@gmail.com" && senha==="123"){
+          alert("Login bem sucedido")
+          location.href="index.html"
+        }
+
+        else{
+          alert("Se mata")
+        }
+      }
+    </script>
+</body>
+</html>

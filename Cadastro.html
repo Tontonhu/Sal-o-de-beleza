@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Cadastro</title>
+</head>
+<body>
+  
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <img src="Imagens/logo.png" height="70">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+            <!-- <span class="fs-4">Joaquina Hair Design</span> -->
+          </a>
+    
+          <ul class="nav nav-pills">
+            <li class="nav-item"><a href="index.html" class="nav-link" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="servicos.html" class="nav-link">Serviços</a></li>
+            <li class="nav-item"><a href="cadastro.html" class="nav-link active">Cadastro</a></li>
+            <li class="nav-item"><a href="login2.html" class="nav-link">Logar</a></li>
+            <li class="nav-item"><a href="equipe.html" class="nav-link">Equipe</a></li>
+            <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+          </ul>
+      </header>
+    </div>
+    <div class="main">
+        <!-- <div class="left">
+        </div> -->
+        <div class="right">
+          <!-- <img src="./Imagens/logo.png"> -->
+            <div class="card-login">
+                <h1 style="text-align: center;">Cadastro</h1><br>
+             
+                <form method="POST" action="cadastro.php">
+                <div class="textfield" style="text-align: center;">
+                    <label for="nome"><b>Digite seu nome completo</b></label>
+                    <input type="text" name="nome" id="nome" placeholder="Nome completo" size="50">
+                </div><br>
+                <div class="textfield" style="text-align: center;">
+                    <label for="telefone"><b>Digite um telefone para contato</b></label>
+                    <input type="text" name="telefone" id="telefone" placeholder="Número com DDD">
+                </div><br>
+                <div class="textfield" style="text-align: center;">
+                    <label for="email"><b>Digite seu Email</b></label>
+                    <input type="email" name="email" id="email" placeholder="name@example.com" size="30">
+                </div><br>
+                <div class="textfield" style="text-align: center;">
+                    <label for="senha"><b>Crie uma Senha</b></label>
+                    <input type="password" name="senha" id="senha" placeholder="Senha" size="20">
+                </div><br>
+                <div style="text-align: center;">
+                <button type="submit" class="btn btn-primary btn-lg px-2 me-md-1" onclick="validarCadastro(); return false">Enviar</button>
+                <a href="index.html"><button type="button" class="btn btn-outline-secondary btn-lg px-2">Cancelar</button></a>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+       
+      <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+          <li class="nav-item"><a href="servicos.html" class="nav-link">Serviços</a></li>
+          <li class="nav-item"><a href="cadastro.html" class="nav-link">Cadastro</a></li>
+          <li class="nav-item"><a href="equipe.html" class="nav-link px-2 text-body-secondary">Equipe</a></li>
+          <li class="nav-item"><a href="contato.html" class="nav-link px-2 text-body-secondary">Contato</a></li>
+        </ul>
+        <p class="text-center text-body-secondary">© 2023 Joaquina Hair Design, Inc</p>
+      </footer>
+  <script type="text/javascript">
+        
+    
+    function validarCadastro(){
+  
+      //Declaração de variáveis
+      var nome = document.getElementById("nome").value;
+      var telefone = document.getElementById("telefone").value;
+      var email = document.getElementById("email").value;
+      var senha = document.getElementById("senha").value;
+  
+      //Validação da senha
+  
+        if(nome===""){
+        alert("Insira seu nome!")
+      }
+        else if (telefone===""){
+          alert ("Insira um telefone!")
+        }
+
+        else if (email===""){
+          alert ("Precisamos de seu E-mail")
+        }
+
+        else if (senha===""){
+          alert ("Crie uma senha!")
+        }
+    }
+      
+          
+        
+  </script>
+</body>
+</html>

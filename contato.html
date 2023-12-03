@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Contato</title>
+</head>
+<body>
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <img src="Imagens/logo.png" height="70">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+            <!-- <span class="fs-4">Joaquina Hair Design</span> -->
+          </a>
+    
+          <ul class="nav nav-pills">
+            <li class="nav-item"><a href="index.html" class="nav-link" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="servicos.html" class="nav-link">Serviços</a></li>
+            <li class="nav-item"><a href="cadastro.html" class="nav-link">Cadastro</a></li>
+            <li class="nav-item"><a href="login2.html" class="nav-link">Logar</a></li>
+            <li class="nav-item"><a href="equipe.html" class="nav-link">Equipe</a></li>
+            <li class="nav-item"><a href="contato.html" class="nav-link active">Contato</a></li>
+          </ul>
+      </header>
+      <div class="container row mb-2">
+      <form method="POST" action="contato.php" class="needs-validation col-6" novalidate="">
+        <div>
+          <div>
+            <label for="Name" class="form-label">Nome Completo</label>
+            <input type="text" class="form-control" name="nome1" id="nome1" placeholder="" value="" required="">
+          </div><br>
+          <div>
+            <label for="email" class="form-label">Email <span class="text-body-secondary">(Opcional)</span></label>
+            <input type="email" class="form-control" name="email1" id="email1" placeholder="you@example.com">
+          </div><br>
+
+          <div>
+            <label for="duvidas" class="duvidas">Dúvidas</label>
+            <input class="form-control" name="duvidas" id="duvidas" placeholder="Gostaria de saber..." required="">
+          </div>
+        </div><br>
+
+        <button class="btn btn-primary btn-lg px-2 me-md-1" type="submit" onclick="validarContato(); return false">Enviar</button>
+        <a href="index.html"><button type="button" class="btn btn-outline-secondary btn-lg px-2">Cancelar</button></a>
+        
+      </form>
+      <div style="text-align:center"><br><br><br>
+        <p>Nosso Endereço: Rodovia BR-230, KM 22, Água Fria – João Pessoa – PB</p>
+         <p>CEP 58053-000</p>
+         <p>Telefone: 83 235-5893</p>
+      </div>
+      </div>
+      <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+          <li class="nav-item"><a href="servicos.html" class="nav-link">Serviços</a></li>
+          <li class="nav-item"><a href="cadastro.html" class="nav-link">Cadastro</a></li>
+          <li class="nav-item"><a href="equipe.html" class="nav-link px-2 text-body-secondary">Equipe</a></li>
+          <li class="nav-item"><a href="contato.html" class="nav-link px-2 text-body-secondary">Contato</a></li>
+        </ul>
+        <p class="text-center text-body-secondary">© 2023 Joaquina Hair Design, Inc</p>
+      </footer>
+      <script type="text/javascript">
+      function validarContato(){
+  
+        //Declaração de variáveis
+        var nome1 = document.getElementById("nome1").value;
+        var email1 = document.getElementById("email1").value;
+        var duvidas = document.getElementById("duvidas").value;
+    
+        //Validação da senha
+    
+          if(nome1===""){
+          alert("Insira seu nome!")
+        }
+       
+          else if (email1===""){
+            alert ("Precisamos de seu E-mail")
+          }
+  
+          else if (duvidas===""){
+            alert ("Digite sua dúvida!")
+          }
+      }
+    </script>
+</body>
+</html>
